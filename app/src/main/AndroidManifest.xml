@@ -12,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".DownloadService"
+            android:exported="false"></service>
+
         <receiver
             android:name=".SmsReceiver"
             android:enabled="true"
@@ -21,8 +25,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".SmsReceiverActivity"
-            android:theme="@style/SmsReceiverTheme"/>
+        <activity
+            android:name=".SmsReceiverActivity"
+            android:theme="@style/SmsReceiverTheme" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
